@@ -51,3 +51,9 @@ The same NoCreo297 design now has dedicated layouts for:
 - Very small phone screens
 
 Also added a mobile/tablet navigation menu and improved image scaling, product layout, gallery, FAQ, footer and cart behavior.
+
+## V9 mobile/tablet fix
+- Fixed the navigation covering the top of the homepage hero on phones/tablets.
+- The complete hero artwork is now visible.
+- Reduced mobile header controls slightly to give the design more breathing room.
+- Kept the desktop/laptop design unchanged.

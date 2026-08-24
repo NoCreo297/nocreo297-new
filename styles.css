@@ -1155,3 +1155,125 @@ footer{
   .editorial-number{font-size:120px}
   .luxury-quote p{font-size:36px}
 }
+
+
+/* ===== V9 MOBILE/TABLET VISIBILITY FIX ===== */
+/* On smaller screens the fixed header was covering the top of the hero artwork.
+   Make the navigation part of the page flow so the complete hero stays visible. */
+@media(max-width:900px){
+  .nav{
+    position:sticky!important;
+    top:0!important;
+    left:auto!important;
+    right:auto!important;
+    width:100%;
+    z-index:35;
+  }
+
+  .hero.hero-final{
+    margin-top:0!important;
+  }
+
+  .hero-final .hero-image-wrap{
+    inset:0!important;
+  }
+
+  .hero-final .hero-image{
+    object-fit:contain!important;
+    object-position:center center!important;
+  }
+}
+
+/* Phone-specific polish */
+@media(max-width:600px){
+  .announcement{
+    position:relative;
+    z-index:36;
+  }
+
+  .nav{
+    height:58px!important;
+    padding:0 4vw!important;
+  }
+
+  .brand{
+    font-size:15px!important;
+  }
+
+  .brand small{
+    font-size:8px!important;
+  }
+
+  .menu-btn{
+    width:38px!important;
+    height:38px!important;
+    padding:8px!important;
+  }
+
+  .cart-btn{
+    padding:8px 9px!important;
+    font-size:8px!important;
+  }
+
+  .hero.hero-final{
+    width:100%;
+    min-height:0!important;
+    height:auto!important;
+    aspect-ratio:1672 / 941!important;
+    padding:0!important;
+    background:#030303!important;
+  }
+
+  .hero-final .hero-image{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    display:block;
+  }
+
+  /* Keep decorative overlays from hiding any part of the artwork */
+  .hero-final .hero-edge-shade{
+    background:linear-gradient(180deg,rgba(0,0,0,.04),transparent 18%,transparent 88%,rgba(0,0,0,.08))!important;
+  }
+
+  .hero-final:after,
+  .hero-final .scroll{
+    display:none!important;
+  }
+
+  /* Prevent anchor sections from hiding under sticky navigation */
+  #collection,
+  #shop,
+  #story,
+  #details,
+  #faq{
+    scroll-margin-top:70px;
+  }
+}
+
+/* Tablet-specific hero visibility */
+@media(min-width:601px) and (max-width:900px){
+  .hero.hero-final{
+    width:100%;
+    min-height:0!important;
+    height:auto!important;
+    aspect-ratio:1672 / 941!important;
+    padding:0!important;
+  }
+
+  .hero-final .hero-image{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+  }
+
+  #collection,
+  #shop,
+  #story,
+  #details,
+  #faq{
+    scroll-margin-top:82px;
+  }
+}
