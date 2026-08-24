@@ -22,16 +22,22 @@
     <a class="brand" href="#top" aria-label="NoCreo 297 home">
       <span>NO CREO</span><small>297</small>
     </a>
-    <nav>
+    <nav class="desktop-nav">
       <a href="#collection">Collection</a>
       <a href="#shop">Shop</a>
       <a href="#story">The Brand</a>
       <a href="#details">Details</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <button class="cart-btn" id="openCart" aria-label="Open shopping bag">
+
+    <div class="nav-actions">
+      <button class="menu-btn" id="openMenu" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="cart-btn" id="openCart" aria-label="Open shopping bag">
       BAG <span id="cartCount">0</span>
-    </button>
+      </button>
+    </div>
   </header>
 
   <main id="top">
@@ -246,6 +252,22 @@
       <span>BLACK / GOLD / 297</span>
     </div>
   </footer>
+
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-panel">
+      <button class="mobile-menu-close" id="closeMenu" aria-label="Close menu">×</button>
+      <p class="eyebrow">NO CREO 297</p>
+      <nav>
+        <a href="#collection">Collection</a>
+        <a href="#shop">Shop</a>
+        <a href="#story">The Brand</a>
+        <a href="#details">Details</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <p class="mobile-menu-tagline">NOT MADE FOR EVERYONE.</p>
+    </div>
+  </div>
 
   <div class="cart-overlay" id="cartOverlay">
     <div class="cart-drawer">

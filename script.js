@@ -103,3 +103,36 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 renderCart();
+
+// Responsive mobile/tablet navigation
+const mobileMenu = document.getElementById('mobileMenu');
+const openMenu = document.getElementById('openMenu');
+const closeMenu = document.getElementById('closeMenu');
+
+function showMobileMenu() {
+  if (!mobileMenu) return;
+  mobileMenu.classList.add('open');
+  mobileMenu.setAttribute('aria-hidden', 'false');
+  openMenu?.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+function hideMobileMenu() {
+  if (!mobileMenu) return;
+  mobileMenu.classList.remove('open');
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  openMenu?.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+openMenu?.addEventListener('click', showMobileMenu);
+closeMenu?.addEventListener('click', hideMobileMenu);
+mobileMenu?.addEventListener('click', (e) => {
+  if (e.target === mobileMenu) hideMobileMenu();
+});
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', hideMobileMenu);
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) hideMobileMenu();
+});

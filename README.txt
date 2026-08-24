@@ -40,3 +40,14 @@ The checkout button is not connected to a payment processor yet. Connect it to y
 ## V6 full website luxury styling
 - Upgraded the background styling across the entire website, not only the hero image.
 - Added layered black/gold gradients, subtle luxury patterning, gold glows, section depth, premium shadows and richer navigation/footer styling.
+
+## V8 Responsive upgrade
+The same NoCreo297 design now has dedicated layouts for:
+- Large desktop / PC
+- Standard desktop and laptop
+- Small laptop
+- Tablet landscape and portrait
+- Phone
+- Very small phone screens
+
+Also added a mobile/tablet navigation menu and improved image scaling, product layout, gallery, FAQ, footer and cart behavior.
