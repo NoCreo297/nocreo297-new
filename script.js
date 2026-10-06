@@ -20,6 +20,7 @@ document.querySelectorAll('[data-qty]').forEach(btn => {
 });
 
 function renderCart() {
+  document.getElementById('clearCart').hidden = cart === 0;
   cartCount.textContent = cart;
   cartTotal.textContent = `€${(cart * price).toFixed(2)}`;
   cartItems.innerHTML = cart ? `
@@ -51,9 +52,9 @@ overlay.addEventListener('click', e => {
   if (e.target === overlay) overlay.classList.remove('open');
 });
 
-document.getElementById('checkout').addEventListener('click', () => {
-  if (!cart) return;
-  alert('Connect this checkout button to your payment provider before publishing.');
+document.getElementById('clearCart').addEventListener('click', () => {
+  cart = 0;
+  renderCart();
 });
 
 document.querySelectorAll('.faq-item').forEach(item => {
